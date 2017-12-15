@@ -1,6 +1,6 @@
 # PyChat 2K17
 
-import random
+import random, time
 
 def start():
     pass
@@ -19,7 +19,9 @@ def confirm(question):
             return False
    
 def has_keyword(statement, keywords):
+    statement = " " + statement
     for word in keywords:
+        word = " " + word
         if word in statement:
             return True
 
@@ -57,13 +59,14 @@ def get_response(statement, name):
     ai_words = ["bot", "ai", "artificial intelligence", "program"]
     music_words = ["music", "song", "lyrics", "singing", "guitar", "piano"]
     gaming_words = ["gamer", "gaming", "video game" , "videogame", "xbox", "nintendo", "ps4", "wii"]
-    
+    greeting_words = ["hello", "hi", "hey", "wassup", "wasup", "what's up", "greetings"]
+
     if has_keyword(statement, family_words):
         response = "Tell me more about your family."
     elif has_keyword(statement, teacher_words):
         response = "I hear that class is really fun."
     elif has_keyword(statement, curse_words):
-        response = "You know you'd be in trouble if you got caught saying that... so why do you do it?"
+        response = "What kind of language is that?!" 
     elif has_keyword(statement, emotion_words):
         response = "Those are some strong feelings right there."
     elif has_keyword(statement, name_words):
@@ -74,6 +77,8 @@ def get_response(statement, name):
         response = "I love music! My favorite song is... uh... well, the only song I know is 'Mary Had A Little Lamb.'"
     elif has_keyword(statement, gaming_words):
         response = "I wish I could play games... I wish you could play games with me, actually."
+    elif has_keyword(statement, greeting_words):
+        response = "Hi, " + name + "! How are you doing today?"
     else:
         response = get_random_response()
 
