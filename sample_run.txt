@@ -1,0 +1,35 @@
+ChiiBot: Hello. I'm ChiiBot.
+ChiiBot: What's your name?
+Guest: Faith
+ChiiBot: You seem pretty cool, Faith.
+ChiiBot: Say something to me! If you want to stop talking, just say GOODBYE
+Faith: Hello!
+ChiiBot is thinking...
+
+ChiiBot: Hi, Faith! How are you doing today?
+Faith: I'm okay.
+ChiiBot is thinking...
+
+ChiiBot: Hm. I can't really relate to that statement, but I still get you.
+Faith: What's your name?
+ChiiBot is thinking...
+
+ChiiBot: I'm not too good at names or naming things. But I know that I am Chii, and you are Faith.
+Faith: Are you an AI?
+ChiiBot is thinking...
+
+ChiiBot: Did you know I'm just a program? I am a low level artifical intelligence.
+Faith: I'm bored now.
+ChiiBot is thinking...
+
+ChiiBot: I wish I was as interesting as you.
+Faith: Aw, you're smothering me with a compliment like that.
+ChiiBot is thinking...
+
+ChiiBot: I'm... not sure I understand.
+Faith: Goodbye
+ChiiBot: Goodbye. It was nice talking to you, Faith.
+Would you like to chat again? (y/n)N
+
+Thank you for talking with ChiiBot.
+>>> 

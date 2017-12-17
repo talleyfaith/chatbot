@@ -6,7 +6,8 @@ def start():
     pass
 
 def end():
-    pass
+    print("")
+    print("Thank you for talking with ChiiBot.")
 
 def confirm(question):
     while True:
@@ -65,8 +66,6 @@ def get_response(statement, name):
         response = "Tell me more about your family."
     elif has_keyword(statement, teacher_words):
         response = "I hear that class is really fun."
-    elif has_keyword(statement, curse_words):
-        response = "What kind of language is that?!" 
     elif has_keyword(statement, emotion_words):
         response = "Those are some strong feelings right there."
     elif has_keyword(statement, name_words):
@@ -79,6 +78,8 @@ def get_response(statement, name):
         response = "I wish I could play games... I wish you could play games with me, actually."
     elif has_keyword(statement, greeting_words):
         response = "Hi, " + name + "! How are you doing today?"
+    elif has_keyword(statement, curse_words):
+        response = "What kind of language is that?!" 
     else:
         response = get_random_response()
 
@@ -87,22 +88,24 @@ def get_response(statement, name):
 def play():
     talking = True
 
-    print("Hello. I'm ChiiBot.")
-    print("What's your name?")
-    name = input(">> ")
-    print("You seem pretty cool, " + name + ".")
-    print("Say something to me!")
+    print("ChiiBot: Hello. I'm ChiiBot.")
+    print("ChiiBot: What's your name?")
+    name = input("Guest: ")
+    print("ChiiBot: You seem pretty cool, " + name + ".")
+    print("ChiiBot: Say something to me! If you want to stop talking, just say GOODBYE")
 
     while talking:
         statement = input(name + ": ")
 
-        if statement == "Goodbye":
+        if statement.lower() == "goodbye":
             talking = False
         else:
+            print("ChiiBot is thinking...\n")
+            time.sleep(3)
             response = get_response(statement, name)
             print("ChiiBot: " + response)
 
-    print("Goodbye. It was nice talking to you.")
+    print("ChiiBot: Goodbye. It was nice talking to you, " + name + ".")
 
 start()
 
